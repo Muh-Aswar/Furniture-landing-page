@@ -15,11 +15,13 @@
 /* ---------- Navbar ---------- */
 
 .container-navbar{
-    /* background: #2323ff; */
+    background: #fff;
     width: 100%;
     display: flex;
     justify-content: center;
     height: 60px;
+    position: fixed;
+    z-index: 3;
 }
 nav{
     /* background: #6b6b6b; */
@@ -28,10 +30,11 @@ nav{
     align-items: center;
     width: 80%;
 }
-nav h3>a{
+nav h3 a{
     text-decoration: none;
-    color: #3a2517;
+    color: #a05f2a;
 }
+
 nav .icon-menu{
     display: none;
 }
@@ -94,6 +97,9 @@ nav .buy:hover{
         padding: 0 20px;
         color: #fff;
     }
+    .brand a{ 
+        color: #fff;
+    }
     nav .icon-menu{
         display: block;
         font-size: 30px;
@@ -134,7 +140,9 @@ nav .buy:hover{
 
 
 /* ---------- Jumbotroon ---------- */
-
+#jumbotron{
+    padding-top: 50px;
+}
 .container-jumbo{
     padding: 20px;
     display: flex;
@@ -176,18 +184,34 @@ nav .buy:hover{
     text-decoration: none;
     border-radius: 5px;
     margin-top: 50px;
+    border: 1px solid #9b5013;
 }
+.card-jumbo .buy:hover{
+    background: #ffffff86;
+    color: #3a2517;
+}
+
 .col-sosmed{
     background: #bd4d02;
+    border-radius: 0 20px 20px 0;
 }
 .col-sosmed .sosmed{
     display: flex;
     flex-direction: column;
+    justify-content:space-around;
+    text-align: center;
+    height: 200px;
 }
 .sosmed i{
     font-size: 2.5rem;
-    margin: 20px;
+    margin: 5px;
     color: #fff;
+    cursor: pointer;
+}
+.sosmed i:hover{
+    background: #ddd;
+    border-radius: 5px;
+    color: #9b5013;
 }
 
 @media (max-width:768px) {
@@ -733,4 +757,35 @@ nav .buy:hover{
     height: 100%;
     object-fit: contain;
 }
+@media (max-width:768px){
+    .container-footer{
+        position: relative;
+        top: 300px;
+    }
+    .wrapper-footer{
+        /* background: yellowgreen; */
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .logo-footer{
+        width: 100%;
+        font-size: 0.5rem;
+    }
+    .text-footer{
+        width: 100%;
+    }
+    .text-footer>ul{
+        /* background: yellow; */
+        display: block;
+        padding: 0;
+    }
+    .text-footer ul li{
+        margin: 0;
+        padding: 5px 0;
+    }
+    .text-footer a{
+        font-size: .8rem;
+    }
+}
+    
 /* ---------- End Footer ---------- */
